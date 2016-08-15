@@ -56,12 +56,12 @@ Getting inside Intranet
 
 Many companies have internal sites, which are used for employees. They are usually Intranet applications and are not available on the Web. Because it is a lot of them and they are used by employees in their daily work, they must work together. Unfortunately, most developers sets the header Access-Control-Allow-Origin: * and allows to carry out the CORS attack. It can be really well used by the attacker, who probably will use social engineering and compel employees to click on a suspicious link, and then in a very easy way to attack the internal enterprise applications. Here is an example of such an attack.
 
-1) The internal corporate employee logs on to the intranet.
-2) The server returns a response containing the Access-Control-Allow-Origin: * because it communicates well with other applications in the company.
-3) The employee receives an e-mail that contains a link to the page with great graphics SVG. Each of these images contain hidden JavaScript code that will run when it is displayed. This is discussed in a separate article.
-4) Code JavaScript XMLHttpRequest send silently in the background and waits for a response. This can be done because the appropriate headers are set to be (X-XSS-Protection: 1; Access-Control-Allow-Origin: *).
-5) JavaScript analyzes the answers and sends back to the attacker's servers. Virus checking and other control measures have been omitted. We will show how to use this feature soon.
-6) We are in the company and act as an employee, and no one will know what happened.
+1. The internal corporate employee logs on to the intranet.
+2. The server returns a response containing the Access-Control-Allow-Origin: * because it communicates well with other applications in the company.
+3. The employee receives an e-mail that contains a link to the page with great graphics SVG. Each of these images contain hidden JavaScript code that will run when it is displayed. This is discussed in a separate article.
+4. Code JavaScript XMLHttpRequest send silently in the background and waits for a response. This can be done because the appropriate headers are set to be (X-XSS-Protection: 1; Access-Control-Allow-Origin: *).
+5. JavaScript analyzes the answers and sends back to the attacker's servers. Virus checking and other control measures have been omitted. We will show how to use this feature soon.
+6. We are in the company and act as an employee, and no one will know what happened.
 
 The new vectors of attack XSS in HTML5
 -----------------------
