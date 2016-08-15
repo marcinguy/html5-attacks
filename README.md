@@ -22,7 +22,9 @@ But my site is secure I am using CSRF tokens …
 
 HTML5 allows to steal CSRF tokens. For example, if the token goes in the URL, or the GET request, you can safely steal CSRF tokens, and this is consistent with the definition of CORS. An attacker could freely use CSRF token and the user will not even notice. To carry out this attack, attribute "withCredentials" has to be set to true and Access-Control-Allow-Origin to '*'. Let's see how it can be used.
 
-Suppose that your website has CSRF protection, and the token is sent GET request. Now the attacker sends a link to the user together with a valid CSRF token and a link to controlled site. The attacker can now be mediated by the Ajax request in the communication between a bank customer and the bank. Below exploit code that could be used (exp1.html):
+Suppose that your website has CSRF protection, and the token is sent GET request. Now the attacker sends a link to the user together with a valid CSRF token and a link to controlled site. The attacker can now be mediated by the Ajax request in the communication between a bank customer and the bank. Below exploit code that could be used
+
+[exp1.html]
 
     <script>
     function exploit()
