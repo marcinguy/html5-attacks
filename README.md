@@ -24,7 +24,8 @@ HTML5 allows to steal CSRF tokens. For example, if the token goes in the URL, or
 
 Suppose that your website has CSRF protection, and the token is sent GET request. Now the attacker sends a link to the user together with a valid CSRF token and a link to controlled site. The attacker can now be mediated by the Ajax request in the communication between a bank customer and the bank. Below exploit code that could be used
 
-[exp1.html]
+
+[exp1.html](exp1.html)
 
     <script>
     function exploit()
