@@ -84,12 +84,12 @@ Darknet Technique: Offline Web Application Cache Poisoning
 
 There is a certain functionality of most web browsers, called an offline cache processing. The functionality has been implemented by most browsers. The functionality is based on the fact that the application can process the contents of the page, even when you use it offline. The main problem of this feature is that an attack "cache poisoning" can be performed using this feature. If an attacker manages to replace at least one file of the site, it has full control over the user account. This can be done eg. using SVG file. You know what is the difference between HTML4 and HTML5? HTML5 essentially does not allow to cache all the files, but it allows you to cache specific files. Using this function, the attacker can steal login details belonging to any user. The following is a sample scenario of attack.
 
-1) The user connects to an unsecured WiFi network at the mall and browse to a page, for example Facebook.
-2) A hacker responds to this request by displaying the iframe Facebook login page, the user's browser automatically sends a request to the Facebook page. Login page to Facebook can be replaced by any application, including banking application.
-3) Because the network is controlled by a hacker, the user will see a normal login page, but inside will be located additional JavaScript code. In addition, the page contains the appropriate tags, which require her to cache the user's system, so the page is already cached in the browser cache.
-4) The sacrifice of a few hours, days, etc etc, it connects to the selected web page, in this case Facebook, but Facebook login page was buffered in a user's system. A page exactly substituted by hackers was buffered in a user's system.
-5) The sacrifice is part of the link, and the browser loads a fake site from the cache.
-6) The victim introduces credentials that are transported to the attacker. By the way, an attacker can mediate communication between Facebook and the innocent victim.
+1. The user connects to an unsecured WiFi network at the mall and browse to a page, for example Facebook.
+2. A hacker responds to this request by displaying the iframe Facebook login page, the user's browser automatically sends a request to the Facebook page. Login page to Facebook can be replaced by any application, including banking application.
+3. Because the network is controlled by a hacker, the user will see a normal login page, but inside will be located additional JavaScript code. In addition, the page contains the appropriate tags, which require her to cache the user's system, so the page is already cached in the browser cache.
+4. The sacrifice of a few hours, days, etc etc, it connects to the selected web page, in this case Facebook, but Facebook login page was buffered in a user's system. A page exactly substituted by hackers was buffered in a user's system.
+5. The sacrifice is part of the link, and the browser loads a fake site from the cache.
+6. The victim introduces credentials that are transported to the attacker. By the way, an attacker can mediate communication between Facebook and the innocent victim.
 
 So through cache poisoning, the attacker can steal user's credentials. 
 
