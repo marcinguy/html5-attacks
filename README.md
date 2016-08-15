@@ -15,7 +15,10 @@ Now, to meet all the demands of developers, HTML5 has to break all the restricti
 What does it mean? So long as the Website, let's call it Website A, can exchange data with another website, Website B, Website B can read all the data from the site Website A. This was possible by creating an exploit, using HTTP tunnel and a simple tool called Shell of the Future. The tool is based on the simple principle that if a party has an XSS vulnerability and JavaScript code can be executed, than innocent user can by clicking on infected link perform so called Cross Origin Requests. If the tool is used in the correct manner, the attacker can view the sessions of its victims and direct requests to the server, pretending to be the victim. Shell of the Future is a subject for a different article and will not be discussed here.
 
 The fact is that you can takeover a session of any user using XSS vulnerability. This is possible only thanks to the COR support of HTML5 and it allows some tunneled connections. 
+
+
 But my site is secure I am using CSRF tokens …
+----------------------------------------------
 
 HTML5 allows to steal CSRF tokens. For example, if the token goes in the URL, or the GET request, you can safely steal CSRF tokens, and this is consistent with the definition of CORS. An attacker could freely use CSRF token and the user will not even notice. To carry out this attack, attribute "withCredentials" has to be set to true and Access-Control-Allow-Origin to '*'. Let's see how it can be used.
 
