@@ -1,7 +1,7 @@
 HTML5 Attacks – Common/Uncommon Attack Vectors
 ----------------------------------------------
 
-HTML5 has been already known for several years. It is one of the key technologies in the Internet. Most websites, transmitting video, slowly give up Adobe Flash technology and switches to HTML5. The fact is that HTML5 is still being developed, and yet it is already used by most websites, mobile applications and IoT. 
+HTML5 has been already known for several years. It is one of the key technologies in the Internet. Most websites, transmitting video, slowly give up Adobe Flash technology and switch to HTML5. The fact is that HTML5 is still being developed, and yet it is already used by most websites, mobile applications and IoT. 
 
 All the latest versions of browsers already offer full support for HTML5, and thus created all the time new improvements to the language itself. All these functions are designed in such a way as to facilitate the handling of multimedia and graphical content without having to use any third-party plug-ins or API. The purpose of this article is to introduce to the few attacks on HTML5 and demonstrate how a hacker can quickly take control of your browser.
 
