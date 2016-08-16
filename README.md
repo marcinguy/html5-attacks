@@ -109,7 +109,7 @@ Summary
 
 Most of these tricks usually are not used or tested against, making it easier for Cybercriminals.
 
-Please make sure you test your website and web application for this problems.
+Please make sure you test your website and web application for these problems.
 
 
 References:
